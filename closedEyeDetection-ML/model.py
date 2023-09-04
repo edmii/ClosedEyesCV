@@ -42,34 +42,6 @@ def ApplyPCA():
     images, labels = openDataSet(r"C:\Users\micci\Desktop\closedEyeDetection-ML\dataset")
     X_train, X_test, y_train, y_test = train_test_split(images, labels, test_size=0.3)
 
-    # #! % explained variance 
-    # pca = PCA()
-    # pca.fit(images)
-
-    # plt.plot(np.cumsum(pca.explained_variance_ratio_))
-    # plt.xlabel('Number of Components')
-    # plt.ylabel('Cumulative Explained Variance')
-    # plt.title('Explained Variance Ratio vs. Number of Components')
-    # plt.grid()
-    # plt.show()
-    # return
-    # #! % explained variance
-
-    #! elbow method
-    # pca = PCA()
-    # pca.fit(images)
-
-    # explained_variances = pca.explained_variance_ratio_
-    
-    # # Plot the explained variances
-    # plt.plot(range(1, len(explained_variances) + 1), explained_variances, marker='o')
-    # plt.xlabel('Number of Components')
-    # plt.ylabel('Explained Variance Ratio')
-    # plt.title('Explained Variance Ratio vs. Number of Components')
-    # plt.grid()
-    # plt.show()
-    # return
-    # #! elbow method
 
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
